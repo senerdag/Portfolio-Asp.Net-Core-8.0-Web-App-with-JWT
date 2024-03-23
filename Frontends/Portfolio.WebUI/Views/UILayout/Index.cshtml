@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+    @await Component.InvokeAsync("_HeadUILayoutComponentPartial")
+
+  
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+    @await Component.InvokeAsync("_NavbarUILayoutComponentPartial")
+
+    @await Component.InvokeAsync("NToastNotify")
+
+    @RenderBody()
+
+    @await Component.InvokeAsync("_FooterUILayoutComponentPartial")
+
+
+  
+    @await Component.InvokeAsync("_ScriptUILayoutComponentPartial")
+
+ 
+    
+  </body>
+</html>
+

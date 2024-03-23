@@ -1,0 +1,54 @@
+﻿@model List<ResultResumeDto>
+
+@{
+    int count = 0;
+}
+
+
+<section class="ftco-section ftco-no-pb" id="resume-section">
+    <div class="container">
+        <div class="row justify-content-center pb-5">
+            <div class="col-md-10 heading-section text-center ftco-animate">
+                <h1 class="big big-2">Resume</h1>
+                <h2 class="mb-4">Resume</h2>
+                @await Component.InvokeAsync("_DescriptionComponentPartial", new {id=1})
+            </div>
+        </div>
+        <div class="row">
+            @foreach(var item in Model)
+            {
+                count++;
+                if(count%2==1)
+                {
+                    <div class="col-md-6">
+                        <div class="resume-wrap ftco-animate">
+                            <span class="date">@item.OnYears</span>
+                            <h2>@item.Title</h2>
+                            <span class="position">@item.University</span>
+                            <p class="mt-4">@item.Description</p>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="col-md-6">
+                        <div class="resume-wrap ftco-animate">
+                            <span class="date">@item.OnYears</span>
+                            <h2>@item.Title</h2>
+                            <span class="position">@item.University</span>
+                            <p class="mt-4">@item.Description</p>
+                        </div>
+                    </div>
+                }
+
+                
+            }
+            
+        </div>
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-6 text-center ftco-animate">
+                <p><a href="https://localhost:7128/cv/cv.pdf" download="cv.pdf" class="btn btn-primary py-4 px-5">Download CV</a></p>
+            </div>
+        </div>
+    </div>
+</section>

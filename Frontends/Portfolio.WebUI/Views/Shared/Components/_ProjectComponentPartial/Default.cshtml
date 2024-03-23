@@ -1,0 +1,51 @@
+﻿@model List<ResultProjectDto>
+@{
+    int count = 0;
+}
+
+<section class="ftco-section ftco-project" id="projects-section">
+    <div class="container">
+        <div class="row justify-content-center pb-5">
+            <div class="col-md-12 heading-section text-center ftco-animate">
+                <h1 class="big big-2">Projects</h1>
+                <h2 class="mb-4">Our Projects</h2>
+                @await Component.InvokeAsync("_DescriptionComponentPartial", new { id = 4 })
+            </div>
+        </div>
+        <div class="row">
+            @foreach(var item in Model)
+            {
+                count++;
+                if (count % 4 == 1 || count % 4 == 0)
+            {
+                    <div class="col-md-4">
+                        <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(@item.CoverImageUrl);">
+                            <div class="overlay"></div>
+                            <div class="text text-center p-4">
+                                <h3><a href="#">@item.Name</a></h3>
+                                <span>@item.JobTitle</span>
+                            </div>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="col-md-8">
+                        <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(@item.CoverImageUrl);">
+                            <div class="overlay"></div>
+                            <div class="text text-center p-4">
+                                <h3><a href="#">@item.Name</a></h3>
+                                <span>@item.JobTitle</span>
+                            </div>
+                        </div>
+                    </div>
+                }
+                
+
+
+            }
+
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,32 @@
+﻿@model List<ResultSkillDto>
+
+<section class="ftco-section" id="skills-section">
+	<div class="container">
+		<div class="row justify-content-center pb-5">
+			<div class="col-md-12 heading-section text-center ftco-animate">
+				<h1 class="big big-2">Skills</h1>
+				<h2 class="mb-4">My Skills</h2>
+				@await Component.InvokeAsync("_DescriptionComponentPartial", new { id = 3 })
+			</div>
+		</div>
+		<div class="row">
+
+			@foreach(var item in Model)
+			{
+				<div class="col-md-6 animate-box">
+					<div class="progress-wrap ftco-animate">
+						<h3>@item.Name</h3>
+						<div class="progress">
+							<div class="progress-bar color-1" role="progressbar" aria-valuenow="@item.Progress"
+								 aria-valuemin="0" aria-valuemax="100" style="width:@item.Progress%">
+								<span>@item.Progress%</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			}
+			
+
+		</div>
+	</div>
+</section>

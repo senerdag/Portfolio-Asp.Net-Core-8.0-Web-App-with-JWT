@@ -1,0 +1,61 @@
+﻿@model List<ResultContactInfoDto>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/AdminUILayout/Index.cshtml";
+    int count = 0;
+}
+
+<div class="row">
+    <div class="col-xl-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Contact Infos</h4>
+                <p class="card-subtitle mb-4">
+                    Create, Delete and Update
+                </p>
+                <div class="table-responsive">
+                    <table class="table mb-0">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>#</th>
+                                <th>Title</th>
+                                <th>Info</th>
+                                <th>Icon</th>
+                                <th>Update</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                count++;
+                                <tr>
+                                    <th scope="row">@count</th>
+                                    <td>@item.Title</td>
+                                    <td>@item.Info</td>
+                                    <td>@item.Icon</td>
+                                    <td> <a href="/Admin/AdminContactInfo/UpdateContactInfo/@item.ContactInfoId" class="btn btn-success">Update</a></td>
+                                    <td> <a href="/Admin/AdminContactInfo/DeleteContactInfo/@item.ContactInfoId" class="btn btn-danger">Delete</a></td>
+                                </tr>
+                            }
+
+
+                        </tbody>
+                    </table>
+                    <a href="/Admin/AdminContactInfo/CreateContactInfo/" class="btn btn-primary">Create Contact Info</a>
+                </div>
+
+            </div>
+            <!-- end card-body-->
+        </div>
+        <!-- end card -->
+
+    </div>
+    <!-- end col -->
+
+
+
+
+</div>
+

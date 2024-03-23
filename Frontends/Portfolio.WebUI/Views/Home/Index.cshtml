@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/UILayout/Index.cshtml";
+}
+
+@await Component.InvokeAsync("_BannerViewComponentPartial")
+
+@await Component.InvokeAsync("_AboutComponentPartial")
+
+@await Component.InvokeAsync("_ResumeComponentPartial")
+
+@await Component.InvokeAsync("_ServiceComponentPartial")
+
+@await Component.InvokeAsync("_SkillComponentPartial")
+
+@await Component.InvokeAsync("_ProjectComponentPartial")
+
+@* @await Component.InvokeAsync("_GetLast3BlogComponentPartial") *@
+
+@await Component.InvokeAsync("_StatisticsComponentPartial")
+
+@await Component.InvokeAsync("_ContactMeComponentPartial")
+
+
+

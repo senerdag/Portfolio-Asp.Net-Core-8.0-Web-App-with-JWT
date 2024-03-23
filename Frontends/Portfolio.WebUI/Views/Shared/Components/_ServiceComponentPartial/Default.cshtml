@@ -1,0 +1,31 @@
+﻿@model List<ResultServiceDto>
+
+
+<section class="ftco-section" id="services-section">
+	<div class="container">
+		<div class="row justify-content-center py-5 mt-5">
+			<div class="col-md-12 heading-section text-center ftco-animate">
+				<h1 class="big big-2">Services</h1>
+				<h2 class="mb-4">Services</h2>
+				@await Component.InvokeAsync("_DescriptionComponentPartial", new { id = 2 })
+			</div>
+		</div>
+		<div class="row">
+			@foreach(var item in Model)
+			{
+				<div class="col-md-4 text-center d-flex ftco-animate">
+					<a href="#" class="services-1">
+						<span class="icon">
+							<i class="@item.Icon"></i>
+						</span>
+						<div class="desc">
+							<h3 class="mb-5">@item.Title</h3>
+						</div>
+					</a>
+				</div>
+			}
+			
+
+		</div>
+	</div>
+</section>

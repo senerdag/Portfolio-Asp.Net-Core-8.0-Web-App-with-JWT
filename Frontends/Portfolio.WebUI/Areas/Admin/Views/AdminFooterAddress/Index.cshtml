@@ -1,0 +1,65 @@
+﻿@model List<ResultFooterAddressDto>
+
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/AdminUILayout/Index.cshtml";
+    int count = 0;
+
+}
+
+<div class="row">
+    <div class="col-xl-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">FooterAddresss</h4>
+                <p class="card-subtitle mb-4">
+                    Create, Delete and Update
+                </p>
+                <div class="table-responsive">
+                    <table class="table mb-0">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>#</th>
+                                <th>Description</th>
+                                <th>Address</th>
+                                <th>Phone</th>
+                                <th>Email</th>
+                                <th>Update</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                count++;
+                                <tr>
+                                    <th scope="row">@count</th>
+                                    <td>@item.Description</td>
+                                    <td>@item.Address</td>
+                                    <td>@item.Phone</td>
+                                    <td>@item.Email</td>
+                                    <td> <a href="/Admin/AdminFooterAddress/UpdateFooterAddress/@item.FooterAddressId" class="btn btn-success">Update</a></td>
+                                    <td> <a href="/Admin/AdminFooterAddress/DeleteFooterAddress/@item.FooterAddressId" class="btn btn-danger">Delete</a></td>
+                                </tr>
+                            }
+
+
+                        </tbody>
+                    </table>
+                    <a href="/Admin/AdminFooterAddress/CreateFooterAddress/" class="btn btn-primary">Create FooterAddress</a>
+                </div>
+
+            </div>
+            <!-- end card-body-->
+        </div>
+        <!-- end card -->
+
+    </div>
+    <!-- end col -->
+
+
+
+
+</div>
+

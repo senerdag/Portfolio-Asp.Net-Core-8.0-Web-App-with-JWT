@@ -1,0 +1,66 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+@await Component.InvokeAsync("_AdminUILayoutHeadComponentPartial")
+
+
+
+<body>
+    @await Component.InvokeAsync("NToastNotify")
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+
+        @await Component.InvokeAsync("_AdminUILayoutHeaderComponentPartial")
+        
+
+        <!-- ========== Left Sidebar Start ========== -->
+        @await Component.InvokeAsync("_AdminUILayoutLeftSideBarComponentPartial")
+        <!-- Left Sidebar End -->
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content">
+
+            <div class="page-content">
+                <div class="container-fluid">
+
+                    @RenderBody()
+
+                </div> <!-- container-fluid -->
+            </div>
+            <!-- End Page-content -->
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            2019 © Xacton.
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="text-sm-right d-none d-sm-block">
+                                Design & Develop by Myra
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+        <!-- end main content-->
+
+    </div>
+    <!-- END layout-wrapper -->
+    <!-- Overlay-->
+    <div class="menu-overlay"></div>
+
+    @await Component.InvokeAsync("_AdminUILayoutScriptsComponentPartial")
+
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+﻿@model CreateResumeDto
+
+@{
+    ViewData["Title"] = "CreateResume";
+    Layout = "~/Areas/Admin/Views/AdminUILayout/Index.cshtml";
+}
+
+<div class="card">
+    <div class="card-body">
+
+        <h4 class="card-title">Create Resume</h4>
+        <p class="card-subtitle mb-4">**Fill The All Blanks**</p>
+
+        <form method="post">
+            <div class="form-group">
+                <label for="exampleInputOnYears">On Years</label>
+                <input class="form-control" id="exampleInputOnYears" asp-for="OnYears" placeholder="Enter On Years">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputTitle">Title</label>
+                <input class="form-control" id="exampleInputTitle" asp-for="Title" placeholder="Title">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputDescription">Description</label>
+                <input class="form-control" id="exampleInputDescription" asp-for="Description" placeholder="Description">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputUniversity">University</label>
+                <input class="form-control" id="exampleInputUniversity" asp-for="University" placeholder="University">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputCvUrl">CvUrl</label>
+                <input class="form-control" id="exampleInputCvUrl" asp-for="CvUrl" placeholder="CvUrl">
+            </div>
+
+            <button type="submit" class="btn btn-primary waves-effect waves-light">Create New Resume</button>
+        </form>
+
+    </div> <!-- end card-body-->
+</div>
+

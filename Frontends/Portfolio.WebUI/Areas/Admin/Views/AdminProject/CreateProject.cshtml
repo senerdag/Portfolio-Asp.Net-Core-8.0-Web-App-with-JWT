@@ -1,0 +1,34 @@
+﻿@model CreateProjectDto
+
+@{
+    ViewData["Title"] = "CreateProject";
+    Layout = "~/Areas/Admin/Views/AdminUILayout/Index.cshtml";
+}
+
+<div class="card">
+    <div class="card-body">
+
+        <h4 class="card-title">Create Project</h4>
+        <p class="card-subtitle mb-4">**Fill The All Blanks**</p>
+
+        <form method="post">
+            <div class="form-group">
+                <label for="exampleInputSideName">Project Name</label>
+                <input class="form-control" id="exampleInputSideName" asp-for="Name" placeholder="Enter Project Name">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputJobTitle">Job Title</label>
+                <input class="form-control" id="exampleInputJobTitle" asp-for="JobTitle" placeholder="Job Title">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputCoverImageUrl">Cover Image Url</label>
+                <input class="form-control" id="exampleInputCoverImageUrl" asp-for="CoverImageUrl" placeholder="Cover Image Url">
+            </div>
+            
+
+            <button type="submit" class="btn btn-primary waves-effect waves-light">Create New Project</button>
+        </form>
+
+    </div> <!-- end card-body-->
+</div>
+

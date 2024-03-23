@@ -1,0 +1,31 @@
+﻿@model UpdateServiceDto
+
+@{
+    ViewData["Title"] = "UpdateService";
+    Layout = "~/Areas/Admin/Views/AdminUILayout/Index.cshtml";
+}
+
+<div class="card">
+    <div class="card-body">
+
+        <h4 class="card-title">Update Service</h4>
+        <p class="card-subtitle mb-4">**Fill The All Blanks**</p>
+
+        <form method="post">
+            <input type="hidden" asp-for="ServiceId" />
+            <div class="form-group">
+                <label for="exampleInputTitle">Title</label>
+                <input class="form-control" id="exampleInputTitle" asp-for="Title" placeholder="Title">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputSideIcon">Icon Class</label>
+                <input class="form-control" id="exampleInputSideIcon" asp-for="Icon" placeholder="Icon">
+            </div>
+
+
+            <button type="submit" class="btn btn-primary waves-effect waves-light">Update Service</button>
+        </form>
+
+    </div> <!-- end card-body-->
+</div>
+

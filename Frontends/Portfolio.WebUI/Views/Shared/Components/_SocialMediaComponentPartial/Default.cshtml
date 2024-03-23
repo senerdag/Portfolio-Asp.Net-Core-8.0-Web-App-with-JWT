@@ -1,0 +1,6 @@
+﻿@model List<ResultSocialMediaDto>
+
+    @foreach(var item in Model)
+{
+    <li class="ftco-animate"><a href="@item.Url"><span class="@item.Icon"></span></a></li>
+}

@@ -1,0 +1,29 @@
+﻿@model CreateSkillDto
+
+@{
+    ViewData["Title"] = "CreateSkill";
+    Layout = "~/Areas/Admin/Views/AdminUILayout/Index.cshtml";
+}
+
+<div class="card">
+    <div class="card-body">
+
+        <h4 class="card-title">Create Skill</h4>
+        <p class="card-subtitle mb-4">**Fill The All Blanks**</p>
+
+        <form method="post">
+            <div class="form-group">
+                <label for="exampleInputName">Name</label>
+                <input class="form-control" id="exampleInputName" asp-for="Name" placeholder="Enter Name">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputProgress">Progress</label>
+                <input class="form-control" id="exampleInputProgress" asp-for="Progress" placeholder="Progress">
+            </div>
+
+            <button type="submit" class="btn btn-primary waves-effect waves-light">Create New Skill</button>
+        </form>
+
+    </div> <!-- end card-body-->
+</div>
+

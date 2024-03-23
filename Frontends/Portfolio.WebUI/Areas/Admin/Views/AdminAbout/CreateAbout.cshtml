@@ -1,0 +1,61 @@
+﻿@model CreateAboutDto
+
+@{
+    ViewData["Title"] = "CreateAbout";
+    Layout = "~/Areas/Admin/Views/AdminUILayout/Index.cshtml";
+}
+
+<div class="card">
+    <div class="card-body">
+
+        <h4 class="card-title">Create About</h4>
+        <p class="card-subtitle mb-4">**Fill The All Blanks**</p>
+
+        <form method="post">
+            <div class="form-group">
+                <label for="exampleInputDescription">Description</label>
+                <input class="form-control" id="exampleInputDescription" asp-for="Description" placeholder="Enter Description">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputName">Name</label>
+                <input class="form-control" id="exampleInputName" asp-for="Name" placeholder="Name">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputDateOfBirth">DateOfBirth</label>
+                <input class="form-control" id="exampleInputDateOfBirth" asp-for="DateOfBirth" placeholder="Date Of Birth">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputAddress">Address</label>
+                <input class="form-control" id="exampleInputAddress" asp-for="Address" placeholder="Address">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputCoverImageUrl">Cover Image Url</label>
+                <input class="form-control" id="exampleInputCoverImageUrl" asp-for="CoverImageUrl" placeholder="Cover Image Url">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputZipCode">ZipCode</label>
+                <input class="form-control" id="exampleInputZipCode" asp-for="ZipCode" placeholder="ZipCode">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail">Email</label>
+                <input class="form-control" id="exampleInputEmail" asp-for="Email" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPhone">Phone</label>
+                <input class="form-control" id="exampleInputPhone" asp-for="Phone" placeholder="Phone">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputCompleteProject">Complete Project</label>
+                <input class="form-control" id="exampleInputCompleteProject" asp-for="CompleteProject" placeholder="Complete Project">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputCvUrl">Cv Url</label>
+                <input class="form-control" id="exampleInputCvUrl" asp-for="CvUrl" placeholder="Cv Url">
+            </div>
+
+            <button type="submit" class="btn btn-primary waves-effect waves-light">Create New About</button>
+        </form>
+
+    </div> <!-- end card-body-->
+</div>
+

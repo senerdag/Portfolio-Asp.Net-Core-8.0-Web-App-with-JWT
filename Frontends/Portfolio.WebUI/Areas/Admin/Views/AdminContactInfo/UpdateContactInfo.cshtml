@@ -1,0 +1,35 @@
+﻿@model UpdateContactInfoDto
+
+@{
+    ViewData["Title"] = "UpdateContactInfo";
+    Layout = "~/Areas/Admin/Views/AdminUILayout/Index.cshtml";
+}
+
+<div class="card">
+    <div class="card-body">
+
+        <h4 class="card-title">Update Contact Info</h4>
+        <p class="card-subtitle mb-4">**Fill The All Blanks**</p>
+
+        <form method="post">
+            <input type="hidden" asp-for="ContactInfoId" />
+            <div class="form-group">
+                <label for="exampleInputTitle">Title</label>
+                <input class="form-control" id="exampleInputTitle" asp-for="Title" placeholder="Enter Title">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputInfo">Info</label>
+                <input class="form-control" id="exampleInputInfo" asp-for="Info" placeholder="Info">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputIcon">Icon</label>
+                <input class="form-control" id="exampleInputIcon" asp-for="Icon" placeholder="Icon">
+            </div>
+
+
+            <button type="submit" class="btn btn-success waves-effect waves-light">Update Contact Info</button>
+        </form>
+
+    </div> <!-- end card-body-->
+</div>
+

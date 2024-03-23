@@ -1,0 +1,38 @@
+﻿@model UpdateFooterAddressDto
+
+@{
+    ViewData["Title"] = "UpdateFooterAddress";
+    Layout = "~/Areas/Admin/Views/AdminUILayout/Index.cshtml";
+}
+
+<div class="card">
+    <div class="card-body">
+
+        <h4 class="card-title">Update FooterAddress</h4>
+        <p class="card-subtitle mb-4">**Fill The All Blanks**</p>
+
+        <form method="post">
+            <input type="hidden" asp-for="FooterAddressId" />
+            <div class="form-group">
+                <label for="exampleInputAddress">Address</label>
+                <input class="form-control" id="exampleInputAddress" asp-for="Address" placeholder="Enter Address">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPhone">Phone</label>
+                <input class="form-control" id="exampleInputPhone" asp-for="Phone" placeholder="Phone">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputDescription">Description</label>
+                <input class="form-control" id="exampleInputDescription" asp-for="Description" placeholder="Description">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail">Email</label>
+                <input class="form-control" id="exampleInputEmail" asp-for="Email" placeholder="Email">
+            </div>
+
+            <button type="submit" class="btn btn-success waves-effect waves-light">Update FooterAddress</button>
+        </form>
+
+    </div> <!-- end card-body-->
+</div>
+
