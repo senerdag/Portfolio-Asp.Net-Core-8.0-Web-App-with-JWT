@@ -64,6 +64,6 @@
 ###############################################################################
 *.css linguist-detectable=false
 *.c# linguist-detectable=true
-*.js linguist-detectable=false
+*.javascript linguist-detectable=false
 *.scss linguist-detectable=false
 *.html linguist-detectable=false
