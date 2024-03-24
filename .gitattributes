@@ -61,3 +61,9 @@
 #*.PDF   diff=astextplain
 #*.rtf   diff=astextplain
 #*.RTF   diff=astextplain
+###############################################################################
+*.css linguist-detectable=false
+*.c# linguist-detectable=true
+*.java linguist-detectable=false
+*.scss linguist-detectable=false
+*.html linguist-detectable=false
