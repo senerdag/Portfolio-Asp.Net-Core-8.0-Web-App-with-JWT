@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Portfolio.Dto.BannerDtos;
 using System.Net.Http;
@@ -6,6 +7,7 @@ using System.Text;
 
 namespace Portfolio.WebUI.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Admin")]
     [Area("Admin")]
     [Route("Admin/AdminBanner")]
     public class AdminBannerController : Controller

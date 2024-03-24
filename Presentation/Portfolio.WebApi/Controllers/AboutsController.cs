@@ -7,7 +7,7 @@ using Portfolio.Application.Features.Mediator.Queries.AboutQueries;
 
 namespace Portfolio.WebApi.Controllers
 {
-
+    
     [Route("api/[controller]")]
     [ApiController]
     public class AboutsController : ControllerBase
@@ -24,6 +24,7 @@ namespace Portfolio.WebApi.Controllers
             var values = await _mediator.Send(new GetAboutQuery());
             return Ok(values);
         }
+        [Authorize(Roles = "Admin")]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetAbout(int id)
         {

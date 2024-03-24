@@ -30,7 +30,7 @@ namespace Portfolio.Application.Tools
             
             var signinCredentials=new SigningCredentials(key,SecurityAlgorithms.HmacSha256);
 
-            var expireDate=DateTime.UtcNow.AddDays(JwtTokenDefault.Expire);
+            var expireDate=DateTime.UtcNow.AddMinutes(JwtTokenDefault.Expire);
 
             JwtSecurityToken token = new JwtSecurityToken(issuer: JwtTokenDefault.ValidIssuer, audience: JwtTokenDefault.ValidAudience,
                 claims: claims, notBefore: DateTime.UtcNow, expires: expireDate, signingCredentials: signinCredentials);

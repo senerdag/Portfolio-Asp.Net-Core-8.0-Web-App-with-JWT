@@ -8,7 +8,7 @@ using System.Text;
 
 namespace Portfolio.WebUI.Areas.Admin.Controllers
 {
-    [Authorize(Roles ="Admin")]
+    [Authorize(Roles = "Admin")]
     [Area("Admin")]
     [Route("Admin/AdminAbout")]
     public class AdminAboutController : Controller
@@ -21,7 +21,7 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
             _httpClientFactory = httpClientFactory;
             _toast = toast;
         }
-
+        
         [Route("Index")]
         public async Task<IActionResult> Index()
         {
